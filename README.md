@@ -1,2 +1,2 @@
 # dio-lab-html
-Resposta ao desafio do módulo de HTML da Dio
+Repositório do lab "Criar Uma Página Web Utilizando as Tags Aprendidas" da Digital Innovation One.
