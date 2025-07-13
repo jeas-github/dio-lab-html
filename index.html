@@ -1,0 +1,1482 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog: Aprendendo HTML Básico</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Aprendendo HTML Básico</h1>
+        <h2 id="inicio">Índice</h2>
+        <nav>
+            <ul>
+                <li><a href="#introducao">Introdução</a></li>
+                <li><a href="#Aula01">Aula01 - Estrutura Básica do HTML</a></li>
+                <li><a href="#Aula02">Aula02 - Tags HTML: Modelando o Texto!</a></li>
+                <li><a href="#Aula03">Aula03 - Organizando Conteúdo com Listas em HTML</a></li>
+                <li><a href="#Aula04">Aula04 - Conectando a Web com Links em HTML</a></li>
+                <li><a href="#Aula05">Aula05 - Coletando Informações com Formulários em HTML</a></li>
+                <li><a href="#Aula06">Aula06 - Agrupando e Estruturando Conteúdo com `div` e `span`</a></li>
+                <li><a href="#Aula07">Aula07 - Enriquecendo sua Página com Mídias em HTML</a></li>
+                <li><a href="#Aula08">Aula08 - Criando Tabelas com HTML</a></li>
+                <li><a href="#Aula09">Aula09 - HTML Semântico: Dando Significado ao seu Conteúdo</a></li>
+                <li><a href="#referencias">Referências & Links</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr />
+
+    <section id="introducao">
+        <h2>Introdução</h2>
+        <p>Bem-vindo(a) ao seu ponto de partida no incrível mundo do desenvolvimento web! Se você está aqui, é porque a
+            curiosidade de criar suas próprias páginas na internet te trouxe a este espaço. E você está no lugar certo!
+
+            Neste blog, vamos embarcar juntos em uma jornada para desvendar o <strong>HTML</strong> (HyperText Markup
+            Language), a
+            linguagem fundamental que estrutura praticamente tudo o que você vê na web. Pense no HTML como o esqueleto
+            de uma página: ele define o conteúdo, a ordem e a hierarquia dos elementos, como títulos, parágrafos,
+            imagens e links.
+            Não se preocupe se você é um iniciante absoluto. Nossas aulas foram cuidadosamente elaboradas para te guiar
+            passo a passo, desde os conceitos mais básicos até a criação de páginas web mais complexas e interativas.
+            Você aprenderá a:
+        </p>
+        <p>
+        <ul>
+            <li>Construir a estrutura essencial de uma página HTML.</li>
+            <li>Utilizar as tags corretas para formatar textos, adicionar imagens e vídeos.</li>
+            <li>Criar listas e links para navegar entre conteúdos.</li>
+            <li>Elaborar formulários para coletar informações de usuários.</li>
+            <li>Organizar seu conteúdo de forma semântica para melhor acessibilidade e SEO.</li>
+        </ul>
+        E muito mais!
+        </p>
+        <p>
+            Prepare-se para transformar suas ideias em realidade digital. Ao final dessa jornada, você terá o
+            conhecimento necessário para iniciar a criação de suas próprias páginas web e dar os primeiros passos
+            sólidos em sua
+            carreira de desenvolvedor(a) ou simplesmente para alimentar sua paixão pela criação online.
+
+            Vamos começar essa aventura? Sua primeira página HTML te espera!
+
+        </p>
+        <span><a href="#inicio"><small><strong>Voltar ao índice</strong></small></a></span>
+    </section>
+    <hr />
+    <section id="Aula01">
+        <h2>Aula 01 - Estrutura Básica do HTML</h2>
+        <p>Todo site que você visita, toda página que você navega na internet, começa com uma estrutura fundamental em
+            HTML.
+            É como o alicerce de uma casa: sem ele, nada se sustenta. Nesta aula, vamos desvendar os componentes
+            essenciais que formam a "espinha dorsal" de qualquer documento HTML.
+
+        </p>
+
+        <h3>O Esqueleto HTML: Entendendo as Partes</h3>
+        <p>A estrutura mínima de uma página HTML é composta por algumas tags cruciais que informam ao navegador como
+            interpretar o documento. Vamos analisá-la linha por linha:</p>
+        <pre>
+            <code>
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="pt-br"&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                    &lt;title&gt;Título da Minha Página&lt;/title&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;h1&gt;Olá Mundo! Este é o Conteúdo.&lt;/h1&gt;
+                    &lt;p&gt;Este é um parágrafo de exemplo dentro do corpo da página.&lt;/p&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
+
+        <h4>Decifrando cada Parte:</h4>
+        <ul>
+            <li>
+                <strong><code>&lt;!DOCTYPE html&gt;</code>:</strong> Esta é a primeira linha de qualquer documento
+                HTML5. Não é uma tag HTML propriamente dita, mas uma "declaração de tipo de documento". Ela informa ao
+                navegador qual versão do HTML está sendo utilizada, garantindo que a página seja renderizada de forma
+                padrão e consistente. Para HTML5, essa é a sintaxe correta e simplificada.
+            </li>
+            <li>
+                <strong><code>&lt;html lang="pt-br"&gt;...&lt;/html&gt;</code>:</strong> Esta é a tag raiz de todo o
+                documento HTML. Tudo o que compõe sua página deve estar aninhado dentro desta tag. O atributo
+                <code>lang="pt-br"</code> é muito importante; ele especifica o idioma principal do conteúdo da página
+                (neste caso, Português do Brasil). Isso ajuda os motores de busca e as tecnologias assistivas (como
+                leitores de tela) a interpretar o conteúdo corretamente, melhorando a acessibilidade e o SEO.
+            </li>
+            <li>
+                <strong><code>&lt;head&gt;...&lt;/head&gt;</code>:</strong> Esta seção contém metadados sobre a página,
+                ou seja, informações que não são exibidas diretamente no navegador para o usuário, mas são cruciais para
+                o funcionamento e a apresentação da página. Aqui você define o título da página, a codificação de
+                caracteres, links para arquivos CSS, scripts JavaScript, e outras configurações importantes.
+                <ul>
+                    <li>
+                        <strong><code>&lt;meta charset="UTF-8"&gt;</code>:</strong> Essencial para garantir que todos os
+                        caracteres (inclusive acentos, cedilhas, etc.) sejam exibidos corretamente. O UTF-8 é o padrão
+                        de codificação mais utilizado e recomendado.
+                    </li>
+                    <li>
+                        <strong><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>:</strong>
+                        Esta meta tag é vital para o design responsivo. Ela instrui o navegador a definir a largura da
+                        viewport (área visível do navegador) para a largura do dispositivo e a escala inicial para 1.0,
+                        garantindo que seu site se adapte bem a diferentes tamanhos de tela (celulares, tablets,
+                        desktops).
+                    </li>
+                    <li>
+                        <strong><code>&lt;title&gt;Título da Minha Página&lt;/title&gt;</code>:</strong> O texto dentro
+                        desta tag é o que aparece na barra de título da aba do navegador. É uma informação importante
+                        para o usuário e para os motores de busca.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <strong><code>&lt;body&gt;...&lt;/body&gt;</code>:</strong> Esta é a parte visível da sua página web!
+                Todo o conteúdo que os usuários verão e interagirão (textos, imagens, vídeos, botões, formulários, etc.)
+                deve ser colocado dentro da tag <code>&lt;body&gt;</code>.
+                <ul>
+                    <li>
+                        <strong><code>&lt;h1&gt;Olá Mundo! Este é o Conteúdo.&lt;/h1&gt;</code>:</strong> Um exemplo de
+                        tag de título de nível 1. Títulos (de `h1` a `h6`) são usados para estruturar o conteúdo e
+                        indicar a importância hierárquica das seções.
+                    </li>
+                    <li>
+                        <strong><code>&lt;p&gt;Este é um parágrafo de exemplo dentro do corpo da página.&lt;/p&gt;</code>:</strong>
+                        Um exemplo de tag de parágrafo, usada para blocos de texto.
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Por Que Essa Estrutura é Importante?</h3>
+        <p>Entender e seguir essa estrutura básica é crucial por vários motivos:</p>
+        <ul>
+            <li><strong>Organização:</strong> Garante que seu código seja bem organizado e fácil de ler, tanto para você
+                quanto para outros desenvolvedores.</li>
+            <li><strong>Compatibilidade:</strong> Ajuda os navegadores a renderizar sua página corretamente em
+                diferentes dispositivos e plataformas.</li>
+            <li><strong>Acessibilidade:</strong> Permite que tecnologias assistivas (como leitores de tela para pessoas
+                com deficiência visual) compreendam a estrutura da página e apresentem o conteúdo de forma
+                significativa.</li>
+            <li><strong>SEO (Search Engine Optimization):</strong> Motores de busca como o Google utilizam essa
+                estrutura para entender o conteúdo da sua página e indexá-la de forma mais eficaz, o que pode melhorar a
+                visibilidade do seu site.</li>
+        </ul>
+
+        <p>Agora que você conhece o alicerce, está pronto para começar a construir o conteúdo da sua página!</p>
+
+        <span><a href="#inicio"><small><strong>Voltar ao índice</strong></small></a></span>
+    </section>
+    <hr />
+
+    <section id="Aula02">
+        <h2>Aula 02 - Tags HTML: Modelando o Texto!</h2>
+        <p>No HTML, as "tags" são como etiquetas que usamos para marcar e dar significado a diferentes partes do nosso
+            conteúdo. Elas são a base da linguagem, informando ao navegador como o texto e outros elementos devem ser
+            estruturados e apresentados. Nesta aula, vamos focar nas tags essenciais para trabalhar com textos, desde
+            títulos e parágrafos até formatações específicas.
+        </p>
+        <h3>Anatomia de uma Tag HTML</h3>
+        <p>A maioria das tags HTML segue uma estrutura padrão:</p>
+        <pre>
+            <code>
+                &lt;tag_de_abertura&gt; Conteúdo &lt;/tag_de_fechamento&gt;
+            </code>
+        </pre>
+        <ul>
+            <li><strong>Tag de Abertura:</strong> Inicia com <code>&lt;</code>, seguida do nome da tag (ex:
+                <code>p</code>, <code>h1</code>) e termina com <code>&gt;</code>.
+            </li>
+            <li><strong>Conteúdo:</strong> É o texto ou outros elementos HTML que a tag está envolvendo.</li>
+            <li><strong>Tag de Fechamento:</strong> Inicia com <code>&lt;/</code>, seguida do nome da tag e termina com
+                <code>&gt;</code>. Note a barra (<code>/</code>) que indica o fechamento.
+            </li>
+        </ul>
+        <p>Algumas tags são "vazias" ou "autofecháveis", o que significa que não possuem conteúdo interno nem tag de
+            fechamento, como <code>&lt;br&gt;</code> (quebra de linha) e <code>&lt;hr&gt;</code> (linha horizontal).</p>
+
+        <h3>Tags HTML Essenciais para Textos</h3>
+
+        <h4>1. Títulos: Organizando Seu Conteúdo</h4>
+        <p>As tags de título (ou cabeçalho) variam de <code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code>, onde
+            <code>&lt;h1&gt;</code> é o mais importante (o título principal da página) e <code>&lt;h6&gt;</code> o de
+            menor importância. Elas são cruciais para a estrutura semântica da sua página, ajudando leitores de tela e
+            motores de busca a entender a hierarquia do seu conteúdo.
+        </p>
+        <pre>
+            <code>
+                &lt;h1&gt;Título Principal do Artigo&lt;/h1&gt;
+                &lt;h2&gt;Subtítulo da Seção&lt;/h2&gt;
+                &lt;h3&gt;Um Tópico Específico&lt;/h3&gt;
+                &lt;p&gt;Use os títulos em ordem hierárquica para estruturar bem o seu texto.&lt;/p&gt;
+            </code>
+        </pre>
+
+        <h4>2. Parágrafos: Blocos de Texto</h4>
+        <p>A tag <code>&lt;p&gt;</code> é usada para definir um parágrafo de texto. O navegador automaticamente adiciona
+            algum espaço antes e depois de um parágrafo.</p>
+        <pre>
+            <code>
+                &lt;p&gt;Este é o primeiro parágrafo do meu conteúdo. Aqui eu explico um conceito importante.&lt;/p&gt;
+                &lt;p&gt;E este é o segundo parágrafo, que complementa a ideia anterior ou introduz um novo ponto.&lt;/p&gt;
+            </code>
+        </pre>
+
+        <h4>3. Quebra de Linha e Linha Horizontal</h4>
+        <ul>
+            <li>
+                <strong><code>&lt;br&gt;</code>: Quebra de Linha</strong><br>
+                Usada para inserir uma quebra de linha simples, sem criar um novo parágrafo. Ideal para endereços,
+                poemas ou onde uma nova linha é necessária dentro do mesmo bloco de texto.
+                <pre><code>Endereço:<br>Rua HTML, 123<br>Bairro das Tags</code></pre>
+            </li>
+            <li>
+                <strong><code>&lt;hr&gt;</code>: Linha Horizontal</strong><br>
+                Cria uma linha horizontal, geralmente usada para separar tematicamente seções de conteúdo.
+                <pre><code>&lt;p&gt;Conteúdo da Seção A&lt;/p&gt;<br>&lt;hr&gt;<br>&lt;p&gt;Conteúdo da Seção B&lt;/p&gt;</code></pre>
+            </li>
+        </ul>
+
+        <h4>4. Formatação de Texto: Ênfase e Estilo</h4>
+        <p>Estas tags são usadas para dar diferentes tipos de ênfase ou significado a partes do texto:</p>
+        <ul>
+            <li>
+                <strong><code>&lt;strong&gt;...&lt;/strong&gt;</code>: Negrito (Importância)</strong><br>
+                Indica que o texto dentro da tag tem grande importância, urgência ou relevância. Geralmente é exibido em
+                negrito.
+                <pre><code>Este é um texto &lt;strong&gt;muito importante&lt;/strong&gt;!</code></pre>
+                Resultado: Este é um texto <strong>muito importante</strong>!
+            </li>
+
+            <li>
+                <strong><code>&lt;em&gt;...&lt;/em&gt;</code>: Itálico (Ênfase)</strong><br>
+                Indica ênfase (stress) no conteúdo. Geralmente é exibido em itálico.
+                <pre><code>Eu &lt;em&gt;realmente&lt;/em&gt; gostei desta aula!</code></pre>
+                Resultado: Eu <em>realmente</em> gostei desta aula!
+            </li>
+
+            <li>
+                <strong><code>&lt;mark&gt;...&lt;/mark&gt;</code>: Destaque/Marcação</strong><br>
+                Usada para destacar ou realçar uma parte do texto, como se estivesse usando um marca-texto.
+                <pre><code>Lembre-se de &lt;mark&gt;salvar seu arquivo&lt;/mark&gt; frequentemente.</code></pre>
+                Resultado: Lembre-se de <mark>salvar seu arquivo</mark> frequentemente.
+            </li>
+
+            <li>
+                <strong><code>&lt;small&gt;...&lt;/small&gt;</code>: Texto Pequeno</strong><br>
+                Representa observações secundárias, como direitos autorais ou avisos legais, que são normalmente
+                renderizadas com uma fonte menor.
+                <pre><code>&lt;small&gt;&amp;copy; 2025 Meu Blog.&lt;/small&gt;</code></pre>
+                Resultado: <small>&copy; 2025 Meu Blog</small>.
+            </li>
+
+            <li>
+                <strong><code>&lt;u&gt;...&lt;/u&gt;</code>: Sublinhado</strong><br>
+                Aplica um sublinhado ao texto. Embora visualmente semelhante a um link, semanticamente não indica um
+                link. Use com moderação para evitar confusão com links.
+                <pre><code>Este texto está &lt;u&gt;sublinhado&lt;/u&gt;.</code></pre>
+                Resultado: Este texto está <u>sublinhado</u>.
+            </li>
+
+            <li>
+                <strong><code>&lt;b&gt;...&lt;/b&gt;</code>: Negrito (Estilo Visual)</strong><br>
+                Representa um trecho de texto que estilisticamente se destaca sem transmitir importância adicional. Use
+                <code>&lt;strong&gt;</code> para importância semântica.
+                <pre><code>Olá, &lt;b&gt;Mundo&lt;/b&gt;!</code></pre>
+                Resultado: Olá, <b>Mundo</b>!
+            </li>
+
+            <li>
+                <strong><code>&lt;i&gt;...&lt;/i&gt;</code>: Itálico (Estilo Visual)</strong><br>
+                Representa um trecho de texto que se destaca por razões técnicas, taxonômicas, ou por um estilo
+                alternativo (como jargões, pensamentos, etc.). Use <code>&lt;em&gt;</code> para ênfase semântica.
+                <pre><code>O termo &lt;i&gt;framework&lt;/i&gt; é comum em desenvolvimento.</code></pre>
+                Resultado: O termo <i>framework</i> é comum em desenvolvimento.
+            </li>
+
+        </ul>
+
+        <p>Com essas tags, você já pode começar a estruturar e estilizar o texto de suas páginas de forma eficaz e
+            significativa!</p>
+
+        <span><a href="#inicio"><small><strong>Voltar ao índice</strong></small></a></span>
+    </section>
+    <hr />
+
+    <section id="Aula03">
+        <h2>Aula 03 - Organizando Conteúdo com Listas em HTML</h2>
+        <p>As listas são elementos fundamentais para organizar informações de forma clara e legível em suas páginas web.
+            Seja para apresentar itens em uma sequência específica, como passos de um tutorial, ou simplesmente para
+            agrupar tópicos relacionados, o HTML oferece dois tipos principais de listas: ordenadas e não ordenadas.</p>
+
+        <h3>1. Listas Não Ordenadas: <code>&lt;ul&gt;</code> (Unordered List)</h3>
+        <p>As listas não ordenadas são usadas para agrupar itens que não precisam seguir uma ordem específica. Por
+            padrão, os itens de uma lista não ordenada são marcados com pontos (marcadores, ou "bullets").</p>
+        <p>A estrutura de uma lista não ordenada envolve a tag <code>&lt;ul&gt;</code> (de unordered list) e, para
+            cada item da lista, a tag <code>&lt;li&gt;</code> (de list item).</p>
+
+        <h4>Exemplo de Lista Não Ordenada:</h4>
+        <pre>
+            <code>
+                &lt;h3&gt;Ingredientes para um Suco:&lt;/h3&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;Laranjas&lt;/li&gt;
+                    &lt;li&gt;Água&lt;/li&gt;
+                    &lt;li&gt;Açúcar (opcional)&lt;/li&gt;
+                    &lt;li&gt;Gelo&lt;/li&gt;
+                &lt;/ul&gt;
+            </code>
+        </pre>
+        <p><strong>Resultado no Navegador:</strong></p>
+        <ul>
+            <li>Laranjas</li>
+            <li>Água</li>
+            <li>Açúcar (opcional)</li>
+            <li>Gelo</li>
+        </ul>
+
+        <h3>2. Listas Ordenadas: <code>&lt;ol&gt;</code> (Ordered List)</h3>
+        <p>As listas ordenadas são utilizadas quando a sequência dos itens é importante. Por padrão, os itens de uma
+            lista ordenada são numerados (1, 2, 3...).</p>
+        <p>A estrutura de uma lista ordenada envolve a tag <code>&lt;ol&gt;</code> (de ordered list) e, assim como nas
+            listas não ordenadas, a tag <code>&lt;li&gt;</code> para cada item.</p>
+
+        <h4>Exemplo de Lista Ordenada:</h4>
+        <pre>
+            <code>
+                &lt;h3&gt;Passos para Fazer um Café:&lt;/h3&gt;
+                &lt;ol&gt;
+                    &lt;li&gt;Ferva a água.&lt;/li&gt;
+                    &lt;li&gt;Adicione o pó de café no filtro.&lt;/li&gt;
+                    &lt;li&gt;Despeje a água quente sobre o pó.&lt;/li&gt;
+                    &lt;li&gt;Sirva e adoce a gosto.&lt;/li&gt;
+                &lt;/ol&gt;
+            </code>
+        </pre>
+        <p><strong>Resultado no Navegador:</strong></p>
+        <ol>
+            <li>Ferva a água.</li>
+            <li>Adicione o pó de café no filtro.</li>
+            <li>Despeje a água quente sobre o pó.</li>
+            <li>Sirva e adoce a gosto.</li>
+        </ol>
+
+        <h3>Listas Aninhadas (Listas Dentro de Listas)</h3>
+        <p>Você pode combinar listas, aninhando uma dentro da outra para criar estruturas mais complexas. Isso é útil
+            para sub-itens ou hierarquias.</p>
+
+        <h4>Exemplo de Lista Aninhada:</h4>
+        <pre>
+            <code>
+                &lt;h3&gt;Meu Plano de Estudo:&lt;/h3&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;Frontend&lt;/li&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;HTML&lt;/li&gt;
+                        &lt;li&gt;CSS&lt;/li&gt;
+                        &lt;li&gt;JavaScript&lt;/li&gt;
+                    &lt;/ul&gt;
+                    &lt;li&gt;Backend&lt;/li&gt;
+                    &lt;ol&gt;
+                        &lt;li&gt;Python&lt;/li&gt;
+                        &lt;li&gt;SQL&lt;/li&gt;
+                    &lt;/ol&gt;
+                &lt;/ul&gt;
+            </code>
+        </pre>
+        <p><strong>Resultado no Navegador:</strong></p>
+        <ul>
+            <li>Frontend</li>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+            <li>Backend</li>
+            <ol>
+                <li>Python</li>
+                <li>SQL</li>
+            </ol>
+        </ul>
+
+        <p>Com o domínio das listas, você tem uma ferramenta poderosa para organizar e apresentar informações de maneira
+            estruturada e intuitiva em suas páginas web!</p>
+
+        <span><a href="#inicio"><small><strong>Voltar ao índice</strong></small></a></span>
+    </section>
+    <hr />
+
+    <section id="Aula04">
+        <h2>Aula 04 - Conectando a Web com Links em HTML</h2>
+        <p>Os links, ou hiperlinks, são a essência da World Wide Web. Eles são a cola que une páginas e conteúdos,
+            permitindo que os usuários naveguem de um documento para outro, seja dentro do mesmo site ou para sites
+            completamente diferentes. A tag principal para criar links em HTML é a tag <code>&lt;a&gt;</code>, de
+            "âncora" (anchor).</p>
+
+        <h3>A Tag <code>&lt;a&gt;</code> e o Atributo <code>href</code></h3>
+        <p>A tag <code>&lt;a&gt;</code> é usada em conjunto com o atributo <code>href</code> (de "hypertext reference"),
+            que especifica o URL (Uniform Resource Locator) para o qual o link apontará.</p>
+        <pre>
+            <code>
+                &lt;a href="URL_do_destino"&gt;Texto visível do link&lt;/a&gt;
+            </code>
+        </pre>
+        <ul>
+            <li><strong><code>href</code>:</strong> É o atributo mais importante da tag <code>&lt;a&gt;</code>. Ele
+                contém o endereço (URL) da página ou recurso para onde o link irá direcionar o usuário.</li>
+            <li><strong>Texto visível do link:</strong> É o texto (ou imagem, ou outro elemento) que os usuários verão e
+                clicarão. É importante que este texto seja descritivo e claro sobre o destino do link.</li>
+        </ul>
+
+        <h3>Tipos de Links:</h3>
+
+        <h4>1. Links Externos: Navegando para Outros Sites</h4>
+        <p>Links externos são aqueles que direcionam o usuário para uma página em um domínio diferente do seu site
+            atual. É crucial incluir o prefixo <code>http://</code> ou <code>https://</code> no atributo
+            <code>href</code>.
+        </p>
+        <pre>
+            <code>
+                &lt;p&gt;Para aprender mais sobre HTML, visite a &lt;a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML"&gt;Documentação HTML no MDN&lt;/a&gt;.&lt;/p&gt;
+            </code>
+        </pre>
+        <p><strong>Resultado no Navegador:</strong></p>
+        <p>Para aprender mais sobre HTML, visite a <a
+                href="https://developer.mozilla.org/pt-BR/docs/Web/HTML">Documentação HTML no MDN</a>.</p>
+
+        <h4>2. Links Internos: Navegando Dentro do Seu Próprio Site</h4>
+        <p>Links internos apontam para outras páginas ou seções dentro do mesmo site. Nesses casos, você pode usar
+            caminhos relativos ao seu arquivo HTML ou caminhos absolutos dentro do seu domínio.</p>
+
+        <h5>a) Links para Outras Páginas do Mesmo Site:</h5>
+        <p>Se você tem, por exemplo, uma página <code>sobre.html</code> no mesmo diretório do seu
+            <code>index.html</code>, o link seria:
+        </p>
+        <pre>
+            <code>
+                &lt;p&gt;Conheça mais &lt;a href="sobre.html"&gt;Sobre Nós&lt;/a&gt;.&lt;/p&gt;
+            </code>
+        </pre>
+        <p><strong>Resultado no Navegador:</strong></p>
+        <p>Conheça mais <a href="sobre.html">Sobre Nós</a>.</p>
+
+        <h5>b) Links para Seções Específicas da Mesma Página (Âncoras):</h5>
+        <p>Estes links são úteis para criar índices ou sumários, permitindo que o usuário "pule" para uma parte
+            específica da página. Para isso, você precisa de:</p>
+        <ol>
+            <li>Um atributo <code>id</code> na seção de destino (ex: <code>&lt;section id="nome-da-secao"&gt;</code>).
+            </li>
+            <li>Um link <code>&lt;a href="#nome-da-secao"&gt;</code> que aponta para esse <code>id</code> usando o
+                prefixo <code>#</code>.</li>
+        </ol>
+        <pre>
+            <code>
+                &lt;!-- Na seção de destino --&gt;
+                &lt;h3 id="topico-importante"&gt;Detalhes do Tópico Importante&lt;/h3&gt;
+
+                &lt;!-- O link que leva à seção --&gt;
+                &lt;p&gt;Vá para os &lt;a href="#topico-importante"&gt;Detalhes&lt;/a&gt;.&lt;/p&gt;
+            </code>
+        </pre>
+
+        <h3>Abrindo Links em Novas Abas/Janelas: O Atributo <code>target</code></h3>
+        <p>Para que um link abra em uma nova aba ou janela do navegador, use o atributo <code>target</code> com o valor
+            <code>_blank</code>.
+        </p>
+        <pre>
+            <code>
+                &lt;p&gt;Visite o Google em uma nova aba: &lt;a href="https://www.google.com" target="_blank"&gt;Google&lt;/a&gt;.&lt;/p&gt;
+            </code>
+        </pre>
+        <p><strong>Resultado no Navegador:</strong></p>
+        <p>Visite o Google em uma nova aba: <a href="https://www.google.com" target="_blank">Google</a>.</p>
+        <p class="nota"><strong>Nota de Segurança:</strong> Ao usar <code>target="_blank"</code>, é uma boa prática
+            adicionar também <code>rel="noopener noreferrer"</code> por razões de segurança e performance. Isso impede
+            que a nova página tenha acesso à página original.</p>
+        <pre>
+            <code>
+                &lt;a href="https://www.google.com" target="_blank" rel="noopener noreferrer"&gt;Google Seguro&lt;/a&gt;
+            </code>
+        </pre>
+
+        <h3>Links para E-mail e Telefone</h3>
+        <p>Você também pode criar links que iniciam um cliente de e-mail ou discam um número de telefone:</p>
+        <ul>
+            <li>
+                <strong>E-mail:</strong> Use <code>mailto:</code>
+                <pre><code>&lt;a href="mailto:seuemail@exemplo.com"&gt;Envie-nos um e-mail&lt;/a&gt;</code></pre>
+            </li>
+            <li>
+                <strong>Telefone:</strong> Use <code>tel:</code> (útil para dispositivos móveis)
+                <pre><code>&lt;a href="tel:+5511987654321"&gt;Ligue agora!&lt;/a&gt;</code></pre>
+            </li>
+        </ul>
+
+        <p>Com os links, suas páginas deixam de ser ilhas e se tornam parte da vasta rede de informações da internet,
+            conectando-se a outros conteúdos e recursos!</p>
+
+        <span><a href="#inicio"><small><strong>Voltar ao índice</strong></small></a></span>
+    </section>
+    <hr />
+
+    <section id="Aula05">
+        <h2>Aula 05 - Coletando Informações com Formulários em HTML</h2>
+        <p>Os formulários HTML são a ponte entre o usuário e o servidor, permitindo que você colete dados, como nomes,
+            e-mails, mensagens e outras informações. Eles são a base para interações como logins, cadastros, caixas de
+            contato e pesquisas. A criação de um formulário envolve principalmente a tag <code>&lt;form&gt;</code> e uma
+            variedade de tags de entrada (inputs) e outros elementos.</p>
+
+        <h3>A Tag Principal: <code>&lt;form&gt;</code></h3>
+        <p>Tudo o que pertence a um formulário deve estar aninhado dentro da tag <code>&lt;form&gt;</code>.</p>
+        <pre>
+            <code>
+                &lt;form action="/processar_dados" method="post"&gt;
+                    &lt;!-- Elementos do formulário aqui --&gt;
+                &lt;/form&gt;
+            </code>
+        </pre>
+        <ul>
+            <li>
+                <strong><code>action</code>:</strong> Este atributo define para onde os dados do formulário serão
+                enviados quando ele for submetido (geralmente uma URL no servidor que processará os dados).
+            </li>
+            <li>
+                <strong><code>method</code>:</strong> Define o método HTTP para enviar os dados. Os mais comuns são:
+                <ul>
+                    <li><code>"get"</code>: Os dados do formulário são anexados à URL (visível na barra de endereços).
+                        Ideal para buscas e dados que não são sensíveis.</li>
+                    <li><code>"post"</code>: Os dados do formulário são enviados no corpo da requisição HTTP (não
+                        visível na URL). Ideal para dados sensíveis como senhas ou informações longas.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Principais Elementos de Entrada (Inputs)</h3>
+        <p>A tag <code>&lt;input&gt;</code> é a mais versátil em formulários e sua função muda drasticamente com o
+            atributo <code>type</code>.</p>
+
+        <h4>1. Campos de Texto Simples: <code>&lt;input type="text"&gt;</code></h4>
+        <p>Usado para entradas de texto de uma única linha, como nomes, sobrenomes, etc.</p>
+        <pre>
+            <code>
+                &lt;label for="nomeUsuario"&gt;Nome Completo:&lt;/label&gt;&lt;br&gt;
+                &lt;input type="text" id="nomeUsuario" name="nome_usuario" placeholder="Digite seu nome"&gt;
+            </code>
+        </pre>
+        <p><strong>Atributos comuns:</strong></p>
+        <ul>
+            <li><code>id</code>: Identificador único para o campo (útil para o <code>&lt;label&gt;</code>).</li>
+            <li><code>name</code>: Nome do campo, usado para identificar os dados quando enviados ao servidor.</li>
+            <li><code>placeholder</code>: Texto de dica que aparece no campo antes do usuário digitar.</li>
+        </ul>
+
+        <h4>2. E-mail: <code>&lt;input type="email"&gt;</code></h4>
+        <p>Campo projetado para endereços de e-mail. Navegadores podem oferecer validação básica de formato.</p>
+        <pre>
+            <code>
+                &lt;label for="emailContato"&gt;Seu E-mail:&lt;/label&gt;&lt;br&gt;
+                &lt;input type="email" id="emailContato" name="email_contato" required&gt;
+            </code>
+        </pre>
+        <p><strong>Atributo <code>required</code>:</strong> Indica que o campo deve ser preenchido antes do envio do
+            formulário.</p>
+
+        <h4>3. Senha: <code>&lt;input type="password"&gt;</code></h4>
+        <p>Para senhas. O texto digitado é mascarado (aparece como pontos ou asteriscos).</p>
+        <pre>
+            <code>
+                &lt;label for="senha"&gt;Senha:&lt;/label&gt;&lt;br&gt;
+                &lt;input type="password" id="senha" name="senha_usuario"&gt;
+            </code>
+        </pre>
+
+        <h4>4. Botão de Envio: <code>&lt;input type="submit"&gt;</code></h4>
+        <p>Cria um botão que, quando clicado, envia os dados do formulário para o endereço especificado no atributo
+            <code>action</code> da tag <code>&lt;form&gt;</code>.
+        </p>
+        <pre>
+            <code>
+                &lt;input type="submit" value="Enviar Cadastro"&gt;
+            </code>
+        </pre>
+        <p><strong>Atributo <code>value</code>:</strong> Define o texto visível no botão.</p>
+
+        <h3>Outras Tags Importantes em Formulários</h3>
+
+        <h4>1. Rótulos: <code>&lt;label&gt;</code></h4>
+        <p>A tag <code>&lt;label&gt;</code> associa um rótulo de texto a um controle de formulário (como um
+            <code>&lt;input&gt;</code>). Isso melhora a acessibilidade, pois ao clicar no rótulo, o campo correspondente
+            é focado.
+        </p>
+        <p>Use o atributo <code>for</code> na tag <code>&lt;label&gt;</code> com o mesmo valor do atributo
+            <code>id</code> do seu <code>&lt;input&gt;</code>.
+        </p>
+        <pre>
+            <code>
+                &lt;label for="primeiroNome"&gt;Primeiro Nome:&lt;/label&gt;
+                &lt;input type="text" id="primeiroNome" name="primeiro_nome"&gt;
+            </code>
+        </pre>
+
+        <h4>2. Áreas de Texto Maiores: <code>&lt;textarea&gt;</code></h4>
+        <p>Para entradas de texto de múltiplas linhas, como mensagens ou comentários.</p>
+        <pre>
+            <code>
+                &lt;label for="mensagem"&gt;Sua Mensagem:&lt;/label&gt;&lt;br&gt;
+                &lt;textarea id="mensagem" name="mensagem_usuario" rows="5" cols="40"&gt;&lt;/textarea&gt;
+            </code>
+        </pre>
+        <p><strong>Atributos comuns:</strong></p>
+        <ul>
+            <li><code>rows</code>: Número de linhas visíveis.</li>
+            <li><code>cols</code>: Número de colunas visíveis (largura).</li>
+        </ul>
+
+        <h4>3. Caixas de Seleção: <code>&lt;input type="checkbox"&gt;</code></h4>
+        <p>Permite selecionar uma ou mais opções de um conjunto.</p>
+        <pre>
+            <code>
+                &lt;input type="checkbox" id="aceitoTermos" name="termos" value="sim"&gt;
+                &lt;label for="aceitoTermos"&gt;Aceito os termos de uso&lt;/label&gt;
+            </code>
+        </pre>
+
+        <h4>4. Botões de Rádio: <code>&lt;input type="radio"&gt;</code></h4>
+        <p>Permite selecionar apenas uma opção de um conjunto. Os botões de rádio com o mesmo <code>name</code> formam
+            um grupo.</p>
+        <pre>
+            <code>
+                &lt;p&gt;Seu gênero:&lt;/p&gt;
+                &lt;input type="radio" id="masculino" name="genero" value="masculino"&gt;
+                &lt;label for="masculino"&gt;Masculino&lt;/label&gt;&lt;br&gt;
+                &lt;input type="radio" id="feminino" name="genero" value="feminino"&gt;
+                &lt;label for="feminino"&gt;Feminino&lt;/label&gt;
+            </code>
+        </pre>
+
+        <h4>5. Menus Dropdown: <code>&lt;select&gt;</code> e <code>&lt;option&gt;</code></h4>
+        <p>Cria uma lista de opções das quais o usuário pode escolher uma (ou mais, se configurado).</p>
+        <pre>
+            <code>
+                &lt;label for="pais"&gt;País:&lt;/label&gt;
+                &lt;select id="pais" name="pais_selecionado"&gt;
+                    &lt;option value="br"&gt;Brasil&lt;/option&gt;
+                    &lt;option value="us"&gt;Estados Unidos&lt;/option&gt;
+                    &lt;option value="pt"&gt;Portugal&lt;/option&gt;
+                &lt;/select&gt;
+            </code>
+        </pre>
+        <ul>
+            <li><code>&lt;select&gt;</code>: O contêiner para o menu dropdown.</li>
+            <li><code>&lt;option&gt;</code>: Representa uma opção individual dentro do menu. O atributo
+                <code>value</code> é o que é enviado ao servidor.
+            </li>
+        </ul>
+
+        <h3>Organizando Formulários com <code>&lt;fieldset&gt;</code> e <code>&lt;legend&gt;</code></h3>
+        <p>Para agrupar elementos relacionados em um formulário, você pode usar a tag <code>&lt;fieldset&gt;</code>, que
+            desenha uma borda ao redor do grupo. A tag <code>&lt;legend&gt;</code> é usada para fornecer um título para
+            o <code>&lt;fieldset&gt;</code>.</p>
+        <pre>
+            <code>
+                &lt;fieldset&gt;
+                &lt;legend&gt;Dados Pessoais&lt;/legend&gt;
+                &lt;label for="nome"&gt;Nome:&lt;/label&gt;
+                &lt;input type="text" id="nome" name="nome"&gt;&lt;br&gt;
+                &lt;!-- Outros campos aqui --&gt;
+                &lt;/fieldset&gt;
+            </code>
+        </pre>
+
+        <p>Com esses elementos, você já tem as ferramentas necessárias para criar formulários interativos e funcionais
+            em suas páginas HTML!</p>
+
+        <span><a href="#inicio"><small><strong>Voltar ao índice</strong></small></a></span>
+    </section>
+    <hr />
+
+    <section id="Aula06">
+        <h2>Aula 06 - Agrupando e Estruturando Conteúdo com `div` e `span`</h2>
+        <p>Até agora, aprendemos a criar títulos, parágrafos, listas e a formatar textos específicos. Mas e se quisermos
+            agrupar grandes blocos de conteúdo para aplicar um estilo específico a eles, ou destacar apenas uma pequena
+            parte de um texto sem mudar seu significado semântico? É aqui que entram as tags <code>&lt;div&gt;</code> e
+            <code>&lt;span&gt;</code>.
+        </p>
+        <p>Estas tags são consideradas "genéricas" ou "neutras" em termos de semântica (elas não adicionam um
+            significado especial ao conteúdo, ao contrário de um <code>&lt;h1&gt;</code> ou <code>&lt;p&gt;</code>). Seu
+            principal poder reside na capacidade de serem usadas como "contêineres" para aplicar estilos via CSS ou
+            manipulá-las com JavaScript.</p>
+
+        <h3>1. A Tag <code>&lt;div&gt;</code>: O Contêiner de Bloco</h3>
+        <p>A tag <code>&lt;div&gt;</code> (de "division") é um elemento de nível de bloco (block-level element). Isso
+            significa que ela por si só ocupa toda a largura disponível e força uma quebra de linha antes e depois de
+            seu conteúdo, como um parágrafo. Ela é ideal para agrupar seções maiores do seu documento HTML que não se
+            encaixam em tags semânticas mais específicas (como <code>&lt;header&gt;</code>,
+            <code>&lt;section&gt;</code>, etc., que veremos na Aula 09).
+        </p>
+
+        <h4>Exemplo de Uso de <code>&lt;div&gt;</code>:</h4>
+        <p>Imagine que você tem uma área de destaque no seu blog com um título e um parágrafo. Você pode agrupá-los em
+            uma <code>&lt;div&gt;</code> para, por exemplo, dar a eles uma cor de fundo ou uma borda.</p>
+        <pre>
+            <code>
+                &lt;div id="destaque-aula"&gt;
+                    &lt;h3&gt;Atenção: Novo Conteúdo!&lt;/h3&gt;
+                    &lt;p&gt;Nesta seção, estamos aprendendo sobre como organizar visualmente a nossa página.&lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class="cartao-produto"&gt;
+                    &lt;h4&gt;Produto X&lt;/h4&gt;
+                    &lt;p&gt;Descrição breve do produto X.&lt;/p&gt;
+                    &lt;p&gt;Preço: R$ 99,90&lt;/p&gt;
+                &lt;/div&gt;
+            </code>
+        </pre>
+        <p class="nota"><strong>Importante:</strong> Geralmente, você adicionará atributos <code>id</code> (para um
+            elemento único) ou <code>class</code> (para múltiplos elementos que compartilham o mesmo estilo) às suas
+            <code>&lt;div&gt;</code>s. Estes atributos são essenciais para que o CSS possa "mirar" e estilizar esses
+            elementos.
+        </p>
+
+        <h3>2. A Tag <code>&lt;span&gt;</code>: O Contêiner Inline</h3>
+        <p>Ao contrário da <code>&lt;div&gt;</code>, a tag <code>&lt;span&gt;</code> é um elemento de nível de linha
+            (inline-level element). Isso significa que ela não inicia uma nova linha e ocupa apenas a largura necessária
+            para seu conteúdo. Ela é perfeita para aplicar estilos a uma pequena porção de texto dentro de um parágrafo
+            ou frase, sem quebrar o fluxo do texto.</p>
+
+        <h4>Exemplo de Uso de <code>&lt;span&gt;</code>:</h4>
+        <pre>
+            <code>
+                &lt;p&gt;Este é um parágrafo com uma &lt;span class="texto-colorido"&gt;palavra em destaque&lt;/span&gt; para chamar a atenção.&lt;/p&gt;
+
+                &lt;p&gt;A data de hoje é &lt;span id="dataAtual"&gt;13 de Julho de 2025&lt;/span&gt;.&lt;/p&gt;
+            </code>
+        </pre>
+        <p class="nota"><strong>Lembre-se:</strong> Assim como na <code>&lt;div&gt;</code>, a utilidade real de
+            <code>&lt;span&gt;</code> vem quando combinada com <code>id</code> ou <code>class</code> para estilização
+            com CSS.
+        </p>
+
+        <h3><code>div</code> vs. <code>span</code>: Quando Usar Cada Um?</h3>
+        <ul>
+            <li>Use <code>&lt;div&gt;</code> quando precisar agrupar um bloco de conteúdo (parágrafos, títulos, imagens,
+                outras divs) que deva ter sua própria "caixa" e ocupar uma linha inteira. Pense em seções, colunas, ou
+                cards.</li>
+            <li>Use <code>&lt;span&gt;</code> quando precisar aplicar um estilo a uma parte específica de um texto
+                dentro de um parágrafo ou outro elemento de linha, sem criar uma nova linha. Pense em mudar a cor de uma
+                palavra, aplicar um negrito condicional, etc.</li>
+        </ul>
+
+        <h3>Introdução Rápida a Cores (Via CSS)</h3>
+        <p>Embora a tag <code>&lt;font&gt;</code> (mencionada em versões antigas do HTML) seja obsoleta para definir
+            cores e fontes, é importante saber que a forma moderna e correta de fazer isso é com CSS (Cascading Style
+            Sheets). A HTML define a estrutura, e o CSS define a aparência.</p>
+        <p>Por exemplo, para colorir um texto dentro de um <code>&lt;span&gt;</code>:</p>
+        <pre>
+            <code>
+                &lt;!-- No seu arquivo HTML --&gt;
+                &lt;p&gt;Este texto tem uma &lt;span class="cor-vermelha"&gt;palavra vermelha&lt;/span&gt;.&lt;/p&gt;
+            </code>
+        </pre>
+        <p>
+            E, em um arquivo CSS (que veremos em breve em outro treinamento, talvez!):
+        </p>
+        <pre>
+            <code>
+                /* Em um arquivo .css ou dentro da tag &lt;style&gt; no HTML */
+                .cor-vermelha {
+                    color: red;
+                }
+            </code>
+        </pre>
+        <p>Isso demonstra como o HTML (com <code>div</code> e <code>span</code>) e o CSS trabalham juntos para criar
+            páginas visualmente ricas.</p>
+
+        <p>Ao dominar o uso de <code>&lt;div&gt;</code> e <code>&lt;span&gt;</code>, você ganha controle sobre a
+            organização e a estilização dos seus elementos HTML, preparando o terreno para designs mais complexos com
+            CSS!</p>
+
+        <span><a href="#inicio"><small><strong>Voltar ao índice</strong></small></a></span>
+    </section>
+    <hr />
+
+    <section id="Aula07">
+        <h2>Aula 07 - Enriquecendo sua Página com Mídias em HTML</h2>
+        <p>Textos são essenciais, mas imagens, vídeos e áudios tornam suas páginas web muito mais ricas, atraentes e
+            interativas! O HTML oferece tags específicas para incorporar esses tipos de mídia de forma simples e eficaz.
+            Nesta aula, você aprenderá a adicionar esses elementos visuais e sonoros ao seu conteúdo.</p>
+
+        <h3>1. Imagens: <code>&lt;img&gt;</code></h3>
+        <p>A tag <code>&lt;img&gt;</code> é usada para incorporar imagens em uma página HTML. Ela é uma tag vazia (não
+            tem tag de fechamento) e requer alguns atributos importantes para funcionar corretamente.</p>
+        <pre>
+            <code>
+                &lt;img src="caminho_da_imagem.jpg" alt="Descrição da imagem" width="largura" height="altura"&gt;
+            </code>
+        </pre>
+        <ul>
+            <li>
+                <strong><code>src</code> (Source - Fonte):</strong> Atributo obrigatório. Define o caminho (URL) da
+                imagem que será exibida. Pode ser um caminho relativo (para imagens no seu próprio projeto, como
+                `./assets/minha_imagem.jpg`) ou um caminho absoluto (para imagens na web, como
+                `https://exemplo.com/imagem.png`).
+            </li>
+            <li>
+                <strong><code>alt</code> (Alternative Text - Texto Alternativo):</strong> Atributo obrigatório e muito
+                importante. Fornece um texto descritivo para a imagem. Este texto é exibido se a imagem não puder ser
+                carregada (por exemplo, por um erro no caminho) e é lido por leitores de tela para usuários com
+                deficiência visual. Também é crucial para SEO (otimização para motores de busca).
+            </li>
+            <li>
+                <strong><code>width</code> (Largura) e <code>height</code> (Altura):</strong> Atributos opcionais que
+                definem as dimensões da imagem em pixels. Usá-los ajuda o navegador a reservar o espaço antes mesmo da
+                imagem ser carregada, evitando "saltos" no layout.
+            </li>
+        </ul>
+
+        <h4>Exemplo de Imagem:</h4>
+        <pre>
+            <code>
+                &lt;p&gt;Veja esta bela paisagem:&lt;/p&gt;
+                &lt;img src="./assets/paisagem.jpg" alt="Uma paisagem montanhosa com um lago e céu azul." width="600" height="300"&gt;
+            </code>
+        </pre>
+        <p><strong>Resultado no Navegador:</strong></p>
+        <p>Veja esta bela paisagem:</p>
+        <img src="./assets/paisagem.jpg" alt="Uma paisagem montanhosa com um lago e céu azul." width="600" height="300">
+        <br>
+
+        <h3>2. Vídeos: <code>&lt;video&gt;</code></h3>
+        <p>A tag <code>&lt;video&gt;</code> permite incorporar arquivos de vídeo diretamente em sua página. Para
+            oferecer suporte a diferentes navegadores e formatos, é comum usar a tag <code>&lt;source&gt;</code> dentro
+            de <code>&lt;video&gt;</code>.</p>
+        <pre>
+            <code>
+                &lt;video width="largura" height="altura" controls autoplay loop muted&gt;
+                    &lt;source src="caminho_do_video.mp4" type="video/mp4"&gt;
+                    &lt;source src="caminho_do_video.webm" type="video/webm"&gt;
+                    Seu navegador não suporta a tag de vídeo.
+                &lt;/video&gt;
+            </code>
+        </pre>
+        <ul>
+            <li>
+                <strong><code>src</code>:</strong> (Dentro de <code>&lt;source&gt;</code>) O caminho para o arquivo de
+                vídeo. É recomendado oferecer múltiplos formatos (`.mp4`, `.webm`, `.ogg`) para garantir compatibilidade
+                com diferentes navegadores.
+            </li>
+            <li>
+                <strong><code>type</code>:</strong> (Dentro de <code>&lt;source&gt;</code>) O tipo MIME do vídeo (ex:
+                <code>"video/mp4"</code>). Ajuda o navegador a decidir qual fonte usar.
+            </li>
+            <li>
+                <strong><code>width</code> e <code>height</code>:</strong> Definem as dimensões do player de vídeo.
+            </li>
+            <li>
+                <strong><code>controls</code>:</strong> Adiciona os controles padrão do navegador (play/pause, volume,
+                barra de progresso).
+            </li>
+            <li>
+                <strong><code>autoplay</code>:</strong> Tenta iniciar o vídeo automaticamente.
+                (<strong>Atenção:</strong> muitos navegadores bloqueiam isso se o vídeo tiver áudio, a menos que esteja
+                <code>muted</code>).
+            </li>
+            <li>
+                <strong><code>loop</code>:</strong> Faz o vídeo repetir automaticamente quando termina.
+            </li>
+            <li>
+                <strong><code>muted</code>:</strong> Inicia o vídeo sem som. Útil se você usar <code>autoplay</code>.
+            </li>
+            <li>
+                <strong>Texto de fallback:</strong> O texto entre <code>&lt;video&gt;</code> e
+                <code>&lt;/video&gt;</code> é exibido se o navegador do usuário não suportar a tag.
+            </li>
+        </ul>
+
+        <h4>Exemplo de Vídeo:</h4>
+        <pre>
+            <code>
+                &lt;p&gt;Assista ao trailer:&lt;/p&gt;
+                &lt;video width="600" height="300" controls&gt;
+                    &lt;source src="./assets/trailer-Batman.mp4" type="video/mp4"&gt;
+                    &lt;!-- Você pode adicionar outras fontes aqui para compatibilidade, ex: &lt;source src="./assets/trailer-Batman.webm" type="video/webm"&gt; --&gt;
+                    Seu navegador não suporta a tag de vídeo.
+                &lt;/video&gt;
+            </code>
+        </pre>
+        <p><strong>Resultado no Navegador:</strong></p>
+        <p>Assista ao trailer:</p>
+        <video width="600" height="300" controls>
+            <source src="./assets/trailer-Batman.mp4" type="video/mp4">
+            Seu navegador não suporta a tag de vídeo.
+        </video>
+        <br>
+
+        <h3>3. Áudios: <code>&lt;audio&gt;</code></h3>
+        <p>Similar à tag <code>&lt;video&gt;</code>, a tag <code>&lt;audio&gt;</code> permite incorporar arquivos de
+            áudio.</p>
+        <pre>
+            <code>
+                &lt;audio controls autoplay loop muted&gt;
+                    &lt;source src="caminho_do_audio.mp3" type="audio/mpeg"&gt;
+                    &lt;source src="caminho_do_audio.ogg" type="audio/ogg"&gt;
+                    Seu navegador não suporta a tag de áudio.
+                &lt;/audio&gt;
+            </code>
+        </pre>
+        <ul>
+            <li>
+                <strong><code>src</code>:</strong> (Dentro de <code>&lt;source&gt;</code>) O caminho para o arquivo de
+                áudio. É recomendado oferecer múltiplos formatos (`.mp3`, `.ogg`, `.wav`).
+            </li>
+            <li>
+                <strong><code>type</code>:</strong> (Dentro de <code>&lt;source&gt;</code>) O tipo MIME do áudio (ex:
+                <code>"audio/mpeg"</code> para MP3).
+            </li>
+            <li>
+                <strong><code>controls</code>, <code>autoplay</code>, <code>loop</code>, <code>muted</code>:</strong>
+                Funcionam da mesma forma que para vídeos.
+            </li>
+        </ul>
+
+        <h4>Exemplo de Áudio:</h4>
+        <pre>
+            <code>
+                &lt;p&gt;Ouça uma melodia relaxante:&lt;/p&gt;
+                &lt;audio controls&gt;
+                    &lt;source src="./assets/melodia.mp3" type="audio/mpeg"&gt;
+                    Seu navegador não suporta a tag de áudio.
+                &lt;/audio&gt;
+            </code>
+        </pre>
+        <p><strong>Resultado no Navegador:</strong></p>
+        <p>Ouça um Blue de Buddy Guy:</p>
+        <audio controls>
+            <source src="./assets/Mary Had A Little Lamb.flac" type="audio/mpeg">
+            Seu navegador não suporta a tag de áudio.
+        </audio>
+        <br>
+
+        <p>Ao integrar imagens, vídeos e áudios, você transforma suas páginas HTML de documentos estáticos em
+            experiências multimídia ricas e envolventes!</p>
+
+        <span><a href="#inicio"><small><strong>Voltar ao índice</strong></small></a></span>
+    </section>
+    <hr />
+
+    <section id="Aula08">
+        <h2>Aula 08 - Organizando Dados com Tabelas em HTML</h2>
+        <p>As tabelas em HTML são usadas para exibir dados tabulares, ou seja, informações que podem ser organizadas em
+            linhas e colunas. Elas são ideais para apresentar dados estruturados, como calendários, listas de produtos
+            com preços, informações financeiras, ou qualquer conjunto de dados que se beneficie de uma grade visual.</p>
+
+        <h3>Estrutura Básica de uma Tabela:</h3>
+        <p>A criação de uma tabela envolve algumas tags principais que trabalham em conjunto para definir sua estrutura.
+        </p>
+        <pre>
+            <code>
+                &lt;table&gt;
+                    &lt;tr&gt;
+                        &lt;th&gt;Cabeçalho 1&lt;/th&gt;
+                        &lt;th&gt;Cabeçalho 2&lt;/th&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Dado 1A&lt;/td&gt;
+                        &lt;td&gt;Dado 1B&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Dado 2A&lt;/td&gt;
+                        &lt;td&gt;Dado 2B&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/table&gt;
+            </code>
+        </pre>
+
+        <h4>Decifrando as Tags da Tabela:</h4>
+        <ul>
+            <li>
+                <strong><code>&lt;table&gt;...&lt;/table&gt;</code>:</strong> É a tag contêiner principal que define
+                toda a tabela. Todo o conteúdo da tabela deve estar dentro desta tag.
+            </li>
+            <li>
+                <strong><code>&lt;tr&gt;...&lt;/tr&gt;</code> (Table Row):</strong> Representa uma linha (row) na
+                tabela. Cada linha da sua tabela é definida por esta tag.
+            </li>
+            <li>
+                <strong><code>&lt;th&gt;...&lt;/th&gt;</code> (Table Header):</strong> Define uma célula de cabeçalho na
+                tabela. O texto dentro de <code>&lt;th&gt;</code> geralmente é exibido em negrito e centralizado por
+                padrão, indicando que é um título para a coluna (ou linha).
+            </li>
+            <li>
+                <strong><code>&lt;td&gt;...&lt;/td&gt;</code> (Table Data):</strong> Define uma célula de dados na
+                tabela. Estas são as células que contêm o conteúdo principal da sua tabela.
+            </li>
+        </ul>
+
+        <h3>Exemplo Básico de Tabela:</h3>
+        <p>Vamos usar o exemplo do seu código para ilustrar a estrutura:</p>
+        <pre>
+            <code>
+                &lt;table border="1" cellpadding="8"&gt;
+                    &lt;tr&gt;
+                        &lt;th&gt;Nome&lt;/th&gt;
+                        &lt;th&gt;Idade&lt;/th&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Maria&lt;/td&gt;
+                        &lt;td&gt;30&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;João&lt;/td&gt;
+                        &lt;td&gt;25&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/table&gt;
+            </code>
+        </pre>
+        <p><strong>Resultado no Navegador:</strong></p>
+        <table border="1" cellpadding="8">
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+            </tr>
+            <tr>
+                <td>Maria</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>João</td>
+                <td>25</td>
+            </tr>
+        </table>
+        <p class="nota"><strong>Nota sobre Atributos:</strong> Os atributos <code>border</code> (para adicionar bordas)
+            e <code>cellpadding</code> (para espaçamento interno da célula) são atributos HTML que afetam a aparência
+            visual da tabela. Embora funcionem, em projetos reais, a estilização visual é geralmente feita com CSS para
+            maior flexibilidade e separação de preocupações (HTML para estrutura, CSS para estilo).</p>
+
+        <h3>Outros Elementos Úteis para Tabelas (Estrutura e Semântica):</h3>
+
+        <h4><code>&lt;caption&gt;...&lt;/caption&gt;</code>: Título da Tabela</h4>
+        <p>A tag <code>&lt;caption&gt;</code> é usada para fornecer um título ou descrição para a tabela. Deve ser a
+            primeira tag logo após a tag de abertura <code>&lt;table&gt;</code>.</p>
+        <pre>
+            <code>
+                &lt;table border="1"&gt;
+                    &lt;caption&gt;Lista de Alunos e Idades&lt;/caption&gt;
+                    &lt;tr&gt;...&lt;/tr&gt;
+                    &lt;!-- Resto da tabela --&gt;
+                &lt;/table&gt;
+            </code>
+        </pre>
+        <p><strong>Resultado no Navegador:</strong></p>
+        <table border="1">
+            <caption>Lista de Alunos e Idades</caption>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+            </tr>
+            <tr>
+                <td>Maria</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>João</td>
+                <td>25</td>
+            </tr>
+        </table>
+
+        <h4><code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tfoot&gt;</code>: Agrupando Seções da
+            Tabela</h4>
+        <p>Para melhorar a semântica e a organização de tabelas maiores, você pode dividi-las em seções:</p>
+        <ul>
+            <li>
+                <strong><code>&lt;thead&gt;...&lt;/thead&gt;</code> (Table Head):</strong> Agrupa o conteúdo do
+                cabeçalho da tabela (geralmente contendo as tags <code>&lt;th&gt;</code>).
+            </li>
+            <li>
+                <strong><code>&lt;tbody&gt;...&lt;/tbody&gt;</code> (Table Body):</strong> Agrupa as linhas de dados
+                principais da tabela.
+            </li>
+            <li>
+                <strong><code>&lt;tfoot&gt;...&lt;/tfoot&gt;</code> (Table Foot):</strong> Agrupa o rodapé da tabela,
+                que pode conter somatórios, notas, etc. (importante: o <code>&lt;tfoot&gt;</code> deve vir antes do
+                <code>&lt;tbody&gt;</code> no código, mas o navegador o renderizará no final).
+            </li>
+        </ul>
+        <pre>
+            <code>
+            &lt;table border="1"&gt;
+                &lt;caption&gt;Relatório de Vendas Trimestral&lt;/caption&gt;
+                &lt;thead&gt;
+                    &lt;tr&gt;
+                        &lt;th&gt;Mês&lt;/th&gt;
+                        &lt;th&gt;Vendas&lt;/th&gt;
+                    &lt;/tr&gt;
+                &lt;/thead&gt;
+                &lt;tbody&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Janeiro&lt;/td&gt;
+                        &lt;td&gt;R$ 1500&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Fevereiro&lt;/td&gt;
+                        &lt;td&gt;R$ 2000&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/tbody&gt;
+                &lt;tfoot&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Total&lt;/td&gt;
+                        &lt;td&gt;R$ 3500&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/tfoot&gt;
+            &lt;/table&gt;
+            </code>
+        </pre>
+        <p><strong>Resultado no Navegador:</strong></p>
+        <table border="1">
+            <caption>Relatório de Vendas Trimestral</caption>
+            <thead>
+                <tr>
+                    <th>Mês</th>
+                    <th>Vendas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Janeiro</td>
+                    <td>R$ 1500</td>
+                </tr>
+                <tr>
+                    <td>Fevereiro</td>
+                    <td>R$ 2000</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Total</td>
+                    <td>R$ 3500</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <h3>Atributos para Células (Mesclagem):</h3>
+        <p>Para criar layouts de tabela mais complexos, você pode mesclar células:</p>
+        <ul>
+            <li>
+                <strong><code>rowspan</code>:</strong> Mescla células verticalmente (ao longo das linhas). O valor
+                indica quantas linhas a célula deve abranger.
+            </li>
+            <li>
+                <strong><code>colspan</code>:</strong> Mescla células horizontalmente (ao longo das colunas). O valor
+                indica quantas colunas a célula deve abranger.
+            </li>
+        </ul>
+        <pre>
+            <code>
+                &lt;table border="1"&gt;
+                    &lt;tr&gt;
+                        &lt;th colspan="2"&gt;Informações Pessoais&lt;/th&gt; &lt;!-- Ocupa 2 colunas --&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Nome:&lt;/td&gt;
+                        &lt;td&gt;Ana&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td rowspan="2"&gt;Contato:&lt;/td&gt; &lt;!-- Ocupa 2 linhas --&gt;
+                        &lt;td&gt;email@exemplo.com&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;(11) 98765-4321&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/table&gt;
+            </code>
+        </pre>
+        <p><strong>Resultado no Navegador:</strong></p>
+        <table border="1">
+            <tr>
+                <th colspan="2">Informações Pessoais</th>
+            </tr>
+            <tr>
+                <td>Nome:</td>
+                <td>Ana</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Contato:</td>
+                <td>email@exemplo.com</td>
+            </tr>
+            <tr>
+                <td>(11) 98765-4321</td>
+            </tr>
+        </table>
+
+        <p>Dominar as tabelas permite que você organize e apresente grandes volumes de dados de maneira estruturada e
+            compreensível em suas páginas web.</p>
+
+        <span><a href="#inicio"><small><strong>Voltar ao índice</strong></small></a></span>
+    </section>
+    <hr />
+
+    <section id="Aula09">
+        <h2>Aula 09 - HTML Semântico: Dando Significado ao seu Conteúdo</h2>
+        <p>Até agora, aprendemos a usar tags como <code>&lt;div&gt;</code> e <code>&lt;span&gt;</code> para agrupar e
+            organizar nosso conteúdo. No entanto, o HTML moderno vai além da simples estrutura visual; ele busca
+            adicionar significado ao conteúdo através do que chamamos de <strong>HTML Semântico</strong>.</p>
+        <p>O HTML semântico utiliza tags que não apenas definem como um elemento é exibido, mas também o que ele
+            <em>significa</em>. Isso é crucial para:
+        </p>
+        <ul>
+            <li>
+                <strong>Acessibilidade:</strong> Leitores de tela (usados por pessoas com deficiência visual) podem
+                interpretar a estrutura e o propósito das seções da página, facilitando a navegação.
+            </li>
+            <li>
+                <strong>SEO (Search Engine Optimization):</strong> Motores de busca (como Google) entendem melhor o
+                conteúdo e a hierarquia da sua página, o que pode ajudar no ranqueamento.
+            </li>
+            <li>
+                <strong>Manutenibilidade:</strong> O código se torna mais legível e fácil de manter para você e para
+                outros desenvolvedores.
+            </li>
+        </ul>
+
+        <h3>Tags Semânticas Essenciais:</h3>
+        <p>A seguir, algumas das tags semânticas mais importantes que você deve usar para estruturar suas páginas:</p>
+
+        <h4>1. <code>&lt;header&gt;</code>: O Cabeçalho da Página ou Seção</h4>
+        <p>A tag <code>&lt;header&gt;</code> representa um grupo de conteúdo introdutório ou de navegação. Geralmente
+            contém o título principal da página (<code>&lt;h1&gt;</code>), um logo, e/ou links de navegação.</p>
+        <pre>
+            <code>
+                &lt;header&gt;
+                    &lt;h1&gt;Meu Blog de HTML&lt;/h1&gt;
+                    &lt;p&gt;Tudo sobre desenvolvimento web básico.&lt;/p&gt;
+                    &lt;nav&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;&lt;a href="#inicio"&gt;Início&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#Aula01"&gt;Aulas&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/nav&gt;
+                &lt;/header&gt;
+            </code>
+        </pre>
+
+        <h4>2. <code>&lt;nav&gt;</code>: Bloco de Navegação</h4>
+        <p>A tag <code>&lt;nav&gt;</code> define uma seção de links de navegação, seja para o site principal (como seu
+            índice) ou para links relacionados dentro de uma seção específica.</p>
+        <pre>
+            <code>
+                &lt;nav&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="/"&gt;Página Inicial&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="/contato.html"&gt;Contato&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/nav&gt;
+            </code>
+        </pre>
+
+        <h4>3. <code>&lt;main&gt;</code>: Conteúdo Principal Único</h4>
+        <p>A tag <code>&lt;main&gt;</code> representa o conteúdo dominante do <code>&lt;body&gt;</code> de um documento.
+            Deve haver apenas uma tag <code>&lt;main&gt;</code> por página, e ela não deve conter informações que se
+            repetem em outras páginas (como cabeçalhos de site, rodapés, barras laterais de navegação repetitivas).</p>
+        <pre>
+            <code>
+                &lt;body&gt;
+                    &lt;header&gt;...&lt;/header&gt;
+                    &lt;main&gt;
+                        &lt;h1&gt;Bem-vindo ao Nosso Artigo!&lt;/h1&gt;
+                        &lt;p&gt;Aqui está o conteúdo principal e único desta página.&lt;/p&gt;
+                    &lt;/main&gt;
+                    &lt;footer&gt;...&lt;/footer&gt;
+                &lt;/body&gt;
+            </code>
+        </pre>
+
+        <h4>4. <code>&lt;section&gt;</code>: Agrupamento Temático</h4>
+        <p>A tag <code>&lt;section&gt;</code> é usada para agrupar conteúdo tematicamente relacionado. Pense nela como
+            uma seção genérica de um documento, que geralmente possui um título (<code>&lt;h1&gt;</code> a
+            <code>&lt;h6&gt;</code>) para descrever seu conteúdo.
+        </p>
+        <p>No seu próprio blog, cada "Aula" (Aula01, Aula02, etc.) é um excelente exemplo de onde
+            <code>&lt;section&gt;</code> é apropriada!
+        </p>
+        <pre>
+            <code>
+                &lt;section&gt;
+                    &lt;h2&gt;Nossos Serviços&lt;/h2&gt;
+                    &lt;p&gt;Oferecemos desenvolvimento web, design e consultoria.&lt;/p&gt;
+                &lt;/section&gt;
+
+                &lt;section&gt;
+                    &lt;h2&gt;Testemunhos&lt;/h2&gt;
+                    &lt;p&gt;"Ótimo trabalho!" - Cliente Satisfeito.&lt;/p&gt;
+                &lt;/section&gt;
+            </code>
+        </pre>
+
+        <h4>5. <code>&lt;article&gt;</code>: Conteúdo Independente e Reutilizável</h4>
+        <p>A tag <code>&lt;article&gt;</code> representa um conteúdo independente e auto-contido, que poderia ser
+            distribuído ou reutilizado em outros locais. Exemplos incluem posts de blog, artigos de notícias,
+            comentários de usuários ou widgets.</p>
+        <pre>
+            <code>
+                &lt;article&gt;
+                    &lt;h3&gt;Dicas de HTML para Iniciantes&lt;/h3&gt;
+                    &lt;p&gt;Aprenda a criar sua primeira página web.&lt;/p&gt;
+                    &lt;footer&gt;Publicado por João em 10 de Julho de 2025&lt;/footer&gt;
+                &lt;/article&gt;
+            </code>
+        </pre>
+
+        <h4>6. <code>&lt;aside&gt;</code>: Conteúdo Relacionado Indiretamente</h4>
+        <p>A tag <code>&lt;aside&gt;</code> representa um conteúdo que está tangencialmente relacionado ao conteúdo
+            principal do documento. Pense em barras laterais (sidebars), blocos de "leia também", publicidade, ou
+            glossários.</p>
+        <pre>
+            <code>
+                &lt;main&gt;
+                    &lt;p&gt;Conteúdo principal do artigo.&lt;/p&gt;
+                    &lt;aside&gt;
+                        &lt;h4&gt;Artigos Relacionados&lt;/h4&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;HTML Básico&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;Introdução ao CSS&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/aside&gt;
+                &lt;/main&gt;
+            </code>
+        </pre>
+
+        <h4>7. <code>&lt;footer&gt;</code>: O Rodapé da Página ou Seção</h4>
+        <p>A tag <code>&lt;footer&gt;</code> representa o rodapé do documento ou da seção mais próxima. Geralmente
+            contém informações de direitos autorais, links para documentos relacionados, informações de contato, ou nome
+            do autor.</p>
+        <pre>
+            <code>
+                &lt;footer&gt;
+                    &lt;p&gt;&amp;copy; 2025 Meu Blog de HTML. Todos os direitos reservados.&lt;/p&gt;
+                    &lt;p&gt;Contato: &lt;a href="mailto:contato@meublog.com"&gt;contato@meublog.com&lt;/a&gt;&lt;/p&gt;
+                &lt;/footer&gt;
+            </code>
+        </pre>
+
+        <h3>Por Que Usar HTML Semântico?</h3>
+        <p>Em vez de usar apenas <code>&lt;div&gt;</code>s para tudo, o uso de tags semânticas cria uma estrutura mais
+            significativa. Para um navegador ou um leitor de tela, um <code>&lt;header&gt;</code> é claramente o topo de
+            uma seção, um <code>&lt;nav&gt;</code> é um conjunto de links de navegação, e assim por diante. Isso não só
+            organiza melhor seu código, mas também otimiza a experiência para todos os usuários e para a forma como os
+            motores de busca rastreiam seu site.</p>
+
+        <p>Parabéns! Ao dominar o HTML Semântico, você está construindo páginas web não apenas visualmente atraentes,
+            mas também robustas, acessíveis e otimizadas para a web moderna.</p>
+
+        <span><a href="#inicio"><small><strong>Voltar ao índice</strong></small></a></span>
+    </section>
+    <hr />
+
+    <section id="referencias">
+        <h2>Referências & Links</h2>
+
+        <p>Para aprofundar seus conhecimentos em HTML e continuar sua jornada no desenvolvimento web, compilamos uma
+            lista de recursos e documentações confiáveis que foram utilizadas como base para este treinamento e que são
+            altamente recomendadas para consulta e estudo contínuo:</p>
+
+        <h3><strong><u>Documentação Oficial e Guias Completos:</u></strong></h3>
+        <ul>
+            <li>
+                <strong>MDN Web Docs (Mozilla Developer Network)</strong>
+                <p>Considerada uma das fontes mais completas e confiáveis para documentação de tecnologias web.
+                    Essencial para referência de elementos HTML, atributos e guias de uso.</p>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank"
+                            rel="noopener noreferrer">HTML: Linguagem de Marcação de Hipertexto | MDN</a></li>
+                    <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Reference/Elements" target="_blank"
+                            rel="noopener noreferrer">Referência de Elementos HTML | MDN</a></li>
+                </ul>
+            </li>
+            <li>
+                <strong>W3C (World Wide Web Consortium)</strong>
+                <p>A organização que define os padrões da web. A especificação oficial do HTML.</p>
+                <ul>
+                    <li><a href="https://www.w3.org/standards/webdesign/htmlcss" target="_blank"
+                            rel="noopener noreferrer">W3C - HTML e CSS</a></li>
+                    <li><a href="https://www.gov.br/ds/guias/boas-praticas-de-html" target="_blank"
+                            rel="noopener noreferrer">Padrão Digital de Governo - Boas práticas de HTML | Gov.br</a>
+                        (Baseado nos padrões W3C, em português)</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3><strong><u>Tutoriais e Plataformas de Aprendizado:</u></strong></h3>
+        <ul>
+            <li>
+                <strong>W3Schools Online Web Tutorials</strong>
+                <p>Um dos recursos mais populares para iniciantes, com tutoriais práticos e exemplos interativos para
+                    HTML, CSS, JavaScript e muito mais.</p>
+                <ul>
+                    <li><a href="https://www.w3schools.com/html/" target="_blank" rel="noopener noreferrer">HTML
+                            Tutorial | W3Schools</a> (Em inglês, mas fácil de seguir)</li>
+                </ul>
+            </li>
+            <li>
+                <strong>DevMedia</strong>
+                <p>Portal brasileiro com artigos, tutoriais e cursos sobre diversas tecnologias de desenvolvimento,
+                    incluindo HTML.</p>
+                <ul>
+                    <li><a href="https://www.devmedia.com.br/html-basico-codigos-html/16596" target="_blank"
+                            rel="noopener noreferrer">HTML básico: Códigos HTML para Iniciantes - DevMedia</a></li>
+                </ul>
+            </li>
+            <li>
+                <strong>Curso em Vídeo (Prof. Gustavo Guanabara)</strong>
+                <p>Excelente canal brasileiro no YouTube com cursos completos e didáticos sobre desenvolvimento web.
+                    Altamente recomendado para quem prefere aprender com vídeos.</p>
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=SV7TL0hxmIQ&list=PLHz_AreHm4dkZ9-cpC_wE2iufN1FqC_yF"
+                            target="_blank" rel="noopener noreferrer">Playlist de HTML5 e CSS3 - Curso em Vídeo</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3><strong><u>Ferramentas Úteis:</u></strong></h3>
+        <p>Embora este curso seja focado em HTML, estas ferramentas são indispensáveis no dia a dia de um desenvolvedor
+            web:</p>
+        <ul>
+            <li>
+                <strong>VS Code (Visual Studio Code)</strong>
+                <p>Um editor de código-fonte gratuito, leve e poderoso, com suporte a diversas linguagens e extensões
+                    para otimizar seu fluxo de trabalho.</p>
+                <ul>
+                    <li><a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">Download
+                            Visual Studio Code</a></li>
+                </ul>
+            </li>
+            <li>
+                <strong>Google Chrome Developer Tools</strong>
+                <p>Ferramentas de desenvolvedor embutidas no navegador Chrome que permitem inspecionar elementos HTML,
+                    testar estilos CSS, depurar JavaScript e muito mais.</p>
+                <ul>
+                    <li><a href="https://developer.chrome.com/docs/devtools/" target="_blank"
+                            rel="noopener noreferrer">Chrome DevTools | Google Developers</a> (Em inglês, com muitos
+                        exemplos visuais)</li>
+                </ul>
+            </li>
+        </ul>
+
+        <p>Lembre-se que a melhor forma de aprender é praticando. Explore esses recursos, crie seus próprios projetos e
+            não tenha medo de experimentar!</p>
+
+        <span><a href="#inicio"><small><strong>Voltar ao índice</strong></small></a></span>
+    </section>
+    <hr />
+
+    <footer>
+        <p>&copy; 2025 - Blog Aprendendo HTML</p>
+    </footer>
+
+</body>
+
+</html>
